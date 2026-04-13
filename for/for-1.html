@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for문 반복문</title>
+  </head>
+  <body>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/Y61q0uaHJMI?si=3qcTkv3Jk2f--hAk"
+      title="YouTube video player"
+      frameborder="0"
+      allow="
+        accelerometer;
+        autoplay;
+        clipboard-write;
+        encrypted-media;
+        gyroscope;
+        picture-in-picture;
+        web-share;
+      "
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <!-- for 문 반복해서 여러번 하는 것  -->
+    <script>
+      //   console.log("사탕 1개");
+      //   console.log("사탕 1개");
+      //   console.log("사탕 1개");
+      //   console.log("사탕 1개");
+      //   console.log("사탕 1개");
+      //   console.log("사탕 1개");
+      //   for문의 기본형
+      //   for(시작; 조건; 증가;){실행코드}
+      for (let i = 1; i <= 10; i++) {
+        console.log(`사탕 ${i} 개`);
+      }
+      //   1부터 5까지 더한 값
+      let sum = 0;
+      for (let i = 1; i <= 5; i++) {
+        sum += i; // sum = sum + i 식과 똑같은 코드
+      }
+      console.log(sum);
+      for (let i = 0; i <= 6; i++) {
+        console.log(i);
+        document.writeln(`안녕하세요 ${i} 반가워요~ <br>`);
+      }
+      for (let i = 1; i <= 4; i++) {
+        console.log(i);
+        document.writeln(`${i}.상품 <br>`);
+      }
+      //  1~10즁애 짝수만 출력
+      for (let i = 1; i <= 10; i++) {
+        // console.log(i);
+        if (i % 2 === 0) {
+          document.write(`${i} (짝수) <br>`);
+        }
+      }
+      for (let i = 1; i <= 10; i++) {
+        // console.log(i);
+        if (i % 2 === 1) {
+          document.write(`${i} (홀수) <br>`);
+        }
+      }
+      //    별찍기
+      for (let i = 1; i <= 5; i++) {
+        document.write(`${"⭐".repeat(i)}<br>`);
+      }
+    </script>
+  </body>
+</html>
