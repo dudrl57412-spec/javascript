@@ -3,21 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>함수 예제3</title>
+    <title>함수 예제4</title>
   </head>
   <body>
-    <button onclick="changeColor('red')">빨강색</button>
-    <button onclick="changeColor('orange')">주황색</button>
-    <button onclick="changeColor('yellow')">노랑색</button>
-    <button onclick="changeColor('green')">녹색</button>
-    <button onclick="changeColor('blue')">파랑색</button>
-    <button onclick="changeColor('navy')">남색</button>
-    <button onclick="changeColor('purple')">보라색</button>
+    <input type="text" id="nameInput" placeholder="이름을 입력하세요" />
+    <button id="showBtn">확인</button>
+    <p id="result">
+      <!-- js출력 -->
+    </p>
     <script>
-      function changeColor(bg) {
-        console.log(bg);
-        document.body.style.backgroundColor = bg;
+      const nameInput = document.querySelector("#nameInput");
+      const result = document.querySelector("#result");
+      const showBtn = document.querySelector("#showBtn");
+      function showName(name) {
+        result.textContent = `안녕하세요 , ${name}님 반갑습니다. `;
       }
+      // 확인 버튼을 클릭시 input사용자 이름을 출력하겠다.
+      showBtn.addEventListener("click", () => {
+        let userName = nameInput.value;
+        // console.log(userName);
+        showName(userName)
+      });
     </script>
   </body>
 </html>
