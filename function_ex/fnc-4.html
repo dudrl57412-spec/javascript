@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수 예제3</title>
+  </head>
+  <body>
+    <button onclick="changeColor('red')">빨강색</button>
+    <button onclick="changeColor('orange')">주황색</button>
+    <button onclick="changeColor('yellow')">노랑색</button>
+    <button onclick="changeColor('green')">녹색</button>
+    <button onclick="changeColor('blue')">파랑색</button>
+    <button onclick="changeColor('navy')">남색</button>
+    <button onclick="changeColor('purple')">보라색</button>
+    <script>
+      function changeColor(bg) {
+        console.log(bg);
+        document.body.style.backgroundColor = bg;
+      }
+    </script>
+  </body>
+</html>
