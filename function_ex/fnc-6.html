@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수 예제6 - 메뉴 재사용</title>
+  </head>
+  <body>
+    <button id="menuBtn">메뉴</button>
+    <div id="menu" style="display: none">메뉴 내용</div>
+    <script>
+      //메뉴 보이게 하는 함수
+      function toggleMenu() {
+        let menu = document.querySelector("#menu");
+        if (menu.style.display === "none") {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
+      }
+      const menuBtn = document.querySelector("#menuBtn");
+      menuBtn.addEventListener("click", toggleMenu);
+    </script>
+  </body>
+</html>
