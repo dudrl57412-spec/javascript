@@ -6,6 +6,33 @@
     <title>forEach()</title>
   </head>
   <body>
-   
+    <ul id="productList">
+      <!-- js출력 -->
+      <li>
+        <h3>청바지</h3>
+        <p>10000원</p>
+      </li>
+    </ul>
+    <script>
+      const proList = document.querySelector("#productList");
+      const products = [
+        { name: "티셔츠", price: 15000 },
+        { name: "청바지", price: 25000 },
+        { name: "운동화", price: 20000 },
+      ];
+      console.log(products);
+      products.forEach(function (item) {
+        console.log(item);
+
+        console.log(item.name);
+        console.log(item.price);
+        proList.innerHTML += `
+         <li>
+              <h3>${item.name}</h3>
+              <P> 설명 : </p>
+              <p>${item.price.toLocaleString()}원</p>
+             </li>`;
+      });
+    </script>
   </body>
 </html>
