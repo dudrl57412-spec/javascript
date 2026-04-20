@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 예제</title>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. 이벤트 연결 -->
+    <button id="btn">눌러보세요</button>
+    <!-- 2. 입력 이벤트 -->
+    <input type="text" id="username" placeholder="이름을 입력하세요 " />
+    <!-- 3. form 제출 이벤트 -->
+    <form id="myForm">
+      <input type="text" placeholder="이메일 입력하세요" />
+      <button type="submit">제출</button>
+    </form>
+    <!-- 4. 마우스 이벤트 -->
+    <div id="box"></div>
+    <script>
+      // 1. 이벤트 연결
+      const btn = document.querySelector("#btn");
+      btn.addEventListener("click", function () {
+        console.log("click");
+      });
+      //   2. 입력 이벤트
+      const username = document.querySelector("#username");
+      username.addEventListener("input", () => {
+        console.log("입력값", username.value);
+      });
+      //   3. form 제출 이벤트
+      const form = document.querySelector("#myForm");
+      form.addEventListener("submit", function (event) {
+        console.log(event);
+        event.preventDefault();
+        console.log("폼이 제출되었습니다.");
+      });
+      //   4. 마우스 이벤트
+      const box = document.querySelector("#box");
+      box.addEventListener("mouseover", function () {
+        box.style.backgroundColor = "orange";
+      });
+      box.addEventListener("mouseout", function () {
+        box.style.backgroundColor = "aquamarine";
+      });
+    </script>
+  </body>
+</html>
