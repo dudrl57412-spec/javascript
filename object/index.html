@@ -1,11 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체</title>
+  </head>
+  <body>
+    <script>
+      // 자바스크립트
+      // 1. String 2. Array 3. Date 4. Math
+      // String 객체
+      const str = "Hello World";
+      console.log(str);
+      console.log(str.length); //문자의 길이를 알 수 있는 속성
+      console.log(str.toUpperCase()); //대문자로 변경하는 메서드
+      console.log(str.includes("Hello")); //해당하는 내용이
+      // Atrayy 내장객체
+      const arr = [1, 2, 3, 4];
+      console.log(arr);
+      console.log(arr.length);
+      console.log(arr.push(5));
+      console.log(arr);
+      console.log(arr.join("=="));
+      //   Date 객체
+      const today = new Date();
+      console.log(today);
+      console.log(today.toDateString()); //현재 날짜
+      console.log(today.getFullYear()); //년도
+      console.log(today.getMonth() + 1); // 월을 가지고 오는건데 0부터 출력하기 때문에 +1을 해줘야 정확한 값을 가져올 수 있음
+      // Math 객체
+      console.log(Math.PI); //3.14
+      console.log(Math.max(10, 25, 100));
+      console.log(Math.min(10, 25, 100));
+      console.log(Math.random());
+    </script>
+  </body>
 </html>
