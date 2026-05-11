@@ -40,6 +40,13 @@
       <img src="/images/images/cup-1.png" alt="" />
       <img src="/images/images/cup-2.png" alt="" />
     </div>
+    <!-- 삭제버튼 만들기 -->
+    <ul id="todo">
+      <li>공부하기<button>삭제</button></li>
+      <li>운동하기<button>삭제</button></li>
+      <li>청소하기<button>삭제</button></li>
+      <li>런닝하기<button>삭제</button></li>
+    </ul>
     <script>
       const menu = document.querySelector("#menu");
       const result = document.querySelector("#result");
@@ -48,8 +55,8 @@
         console.log(e.target);
         // alert(`${e.target.innerText}클릭`);
         result.innerHTML = `
-      <p>내가 클릭한 메뉴 : <span>${e.target.innerText}</span></P>
-              `;
+        <p>내가 클릭한 메뉴 : <span>${e.target.innerText}</span></P>
+                `;
       });
       //작은 이미지 클릭시
       const imgBox = document.querySelector(".imgBox");
@@ -58,6 +65,21 @@
         console.log(e.target.src);
         //큰 이미지 변경
         big.src = e.target.src;
+        // 이미지들을 forEach해서 ㅁㅊ샾ㄷ를 지운다
+        const imgs = document.querySelectorAll(".imgBox img");
+        imgs.forEach((img) => {
+          console.log(img);
+          img.classList.remove("active");
+        });
+        e.target.classList.toggle("active");
+      });
+      //   삭제 버튼 만들기
+      const todo = document.querySelector("#todo");
+      todo.addEventListener("click", (e) => {
+        console.log(e.target.tagName);
+        {
+          e.target.parentElement.remove();
+        }
       });
     </script>
   </body>
