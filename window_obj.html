@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window 객체</title>
+    <style>
+      body {
+        height: 1500px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="gotoback.html">뒤로가기 페이지</a>
+    <h1>window 개체 주요 속성과 매서드</h1>
+    <ul>
+      <li>
+        <strong>window.innerWidth : </strong>
+        <span id="innerWidth"></span>
+        <!-- js출력 -->
+      </li>
+      <li>
+        <strong>window.innerHeight : </strong>
+        <span id="innerHeight"></span>
+        <!-- js출력 -->
+      </li>
+      <li>
+        <strong>window.location : URL</strong>
+        <span id="location"></span>
+        <!-- js출력 -->
+      </li>
+      <li>
+        <strong>window.document : 현재 html 문서 전체 </strong>
+        <span id="document"></span>
+        <!-- js출력 -->
+      </li>
+      <li>
+        <strong>window.history : 사용자의 뒤로가기 기록</strong>
+        <span id="history"></span>
+        <!-- js출력 -->
+      </li>
+      <li>
+        <strong>window.navigator : </strong>
+        <span id="navigator"></span>
+        <!-- js출력 -->
+      </li>
+    </ul>
+    <h2>scrollTo() 와 scrollBy()</h2>
+    <ul>
+      <li><strong>scrollTo(x,y)</strong>: 페이지의 지정된 위치로 스크롤</li>
+      <li>
+        <strong>scrollBy(x,y)</strong>: 현재 위치를 기준으로 지정된 거리만큼
+        스크롤
+      </li>
+    </ul>
+    <button onclick="window.scrollTo(0, 0)">
+      페이지 맨 위로 이동하기(scrollTo())
+    </button>
+    <button oneclick>100px 아래로 이동(scrolBy())</button>
+    <script>
+      //보이는 화면 크기
+      document.getElementById("innerWidth").textContent =
+        `${window.innerWidth}px`;
+      //보이는 화면 높이
+      document.getElementById("innerHeight").textContent =
+        `${window.innerHeight}px`;
+      //보이는 화면 인터넷 주소
+      document.getElementById("location").textContent = `${window.location}`;
+      // 문서전체
+      document.getElementById("document").textContent = `${window.document}`;
+      // 사용자의 뒤로가기 기록
+      document.getElementById("history").textContent = `${window.history}`;
+      // 벙보가 포함된 객체
+      document.getElementById("navigator").textContent = `${window.navigator}`;
+      // 오프라인 체크 /기기분석
+      //   if (!navigator.online) {
+      //     alert("인터넷 연결 없음");
+      //   }
+    </script>
+  </body>
+</html>
